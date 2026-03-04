@@ -7,7 +7,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 }
 
 /*Confeti Atras*/
@@ -636,10 +637,15 @@ body {
 }
 
 @media (max-width: 768px) {
-
+  .llama {
+    bottom: 180px;
+  }
   body {
-    height: auto;
-    padding-top: 40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 120px;
   }
 
   .portaretrato-torta-caja {
@@ -661,7 +667,7 @@ body {
   }
 
   .torta-cumpleaños {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
 
   .caja-wrapper {

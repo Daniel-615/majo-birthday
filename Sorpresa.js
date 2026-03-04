@@ -34,6 +34,9 @@ llama.addEventListener("click", (e) => {
     cancion.currentTime = 0;
     cancion.play();
     overlay.classList.add("hidden");
+    if (window.innerWidth <= 768) {
+      overlay.classList.add("hidden");
+    }
   }, 1000);
 });
 
