@@ -3,6 +3,26 @@ const regalo = document.querySelector(".regalo");
 const regalos = document.querySelector(".regalos");
 const modalCarta = document.getElementById("modalCarta");
 
+const overlay = document.querySelector(".overlay");
+const soplido = document.getElementById("soplido");
+const cancion = document.getElementById("cancion");
+const llama = document.querySelector(".llama");
+
+const portaretrato = document.querySelector(".portaretrato");
+
+const torta = document.querySelector(".torta-cumpleaños");
+const modalVideo = document.getElementById("modalVideo");
+const video = document.getElementById("videoCumple");
+
+
+window.addEventListener("load", () => {
+  if (window.innerWidth <= 768) {
+    overlay.classList.add("hidden");
+  }
+});
+
+
+
 regalo.addEventListener("click", (e) => {
   e.stopPropagation();
   modalCarta.classList.add("activo");
@@ -17,14 +37,10 @@ modalCarta.addEventListener("click", () => {
   modalCarta.classList.remove("activo");
 });
 
-const overlay = document.querySelector(".overlay");
-const soplido = document.getElementById("soplido");
-const cancion = document.getElementById("cancion");
-const llama = document.querySelector(".llama");
-
 
 llama.addEventListener("click", (e) => {
   e.stopPropagation();
+
   soplido.currentTime = 0;
   soplido.play();
 
@@ -34,14 +50,9 @@ llama.addEventListener("click", (e) => {
     cancion.currentTime = 0;
     cancion.play();
     overlay.classList.add("hidden");
-    if (window.innerWidth <= 768) {
-      overlay.classList.add("hidden");
-    }
   }, 1000);
 });
 
-
-const portaretrato = document.querySelector(".portaretrato");
 
 portaretrato.addEventListener("click", (e) => {
   e.stopPropagation();
@@ -52,13 +63,9 @@ portaretrato.addEventListener("click", (e) => {
 
   setTimeout(() => {
     window.location.href = "image.slider.html";
-  }, 2000);
+  }, 1500);
 });
 
-
-const torta = document.querySelector(".torta-cumpleaños");
-const modalVideo = document.getElementById("modalVideo");
-const video = document.getElementById("videoCumple");
 
 torta.addEventListener("click", (e) => {
   e.stopPropagation();
@@ -69,12 +76,14 @@ torta.addEventListener("click", (e) => {
 
   setTimeout(() => {
     cancion.pause();
-    cancion.currentTime=0;
+    cancion.currentTime = 0;
+
     modalVideo.classList.add("activo");
     video.currentTime = 0;
     video.play();
   }, 1000);
 });
+
 
 modalVideo.addEventListener("click", () => {
   modalVideo.classList.remove("activo");
