@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  font-family: sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  max-width: 75rem;
+  padding: 3em 1.5em;
+  margin: auto;
+}
+
+.main__heading {
+  font-weight: 600;
+  font-size: 2.25em;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #eceff1;
+}
+
+.cards {
+  position: relative;
+}
+
+.cards__inner {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px;
+}
+
+.card {
+  --flow-space: 0.5em;
+  --hue: 0;
+  --saturation: 0%;
+  --lightness: 0%;
+
+  flex: 0 0 200px;
+  height: 300px;
+  padding: 0;
+  display: grid;
+  align-items: start;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 0 1px hsl(var(--hue), var(--saturation), var(--lightness));
+  position: relative;
+  pointer-events: auto;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card:nth-child(1) {
+  --hue: 165;
+  --saturation: 82.26%;
+  --lightness: 51.37%;
+}
+
+.card:nth-child(2) {
+  --hue: 291.34;
+  --saturation: 95.9%;
+  --lightness: 61.76%;
+}
+
+.card:nth-child(3) {
+  --hue: 338.69;
+  --saturation: 100%;
+  --lightness: 48.04%;
+}
+
+.card:nth-child(4) {
+  --hue: 42.37;
+  --saturation: 100%;
+  --lightness: 62.35%;
+}
+
+.card:nth-child(5) {
+  --hue: 199.16;
+  --saturation: 100%;
+  --lightness: 47.45%;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.modal.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-contenido {
+  background: white;
+  color:#000;
+  padding: 30px;
+  max-width: 500px;
+  width: 80%;
+  border-radius: 15px;
+  text-align: center;
+  transform: scale(0.8);
+  transition: 0.3s ease;
+}
+
+.modal.activo .modal-contenido {
+  transform: scale(1);
+}
+
+.modal-contenido h2 {
+  margin-bottom: 15px;
+}
+
+.modal-contenido p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+
+  body {
+    overflow-y: auto;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+
+  .cards__inner {
+    flex-direction: column;
+    gap: 20px;
+    perspective: none;
+  }
+
+  .card {
+    flex: none;
+    width: 80%;
+    height: 220px;
+  }
+
+  .modal-contenido {
+    width: 90%;
+    padding: 20px;
+  }
+
+}
