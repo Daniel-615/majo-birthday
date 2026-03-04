@@ -89,3 +89,19 @@ modalVideo.addEventListener("click", () => {
   modalVideo.classList.remove("activo");
   video.pause();
 });
+const letras = document.querySelectorAll(".letra");
+const frase = document.getElementById("fraseMostrada");
+
+letras.forEach(letra => {
+  letra.addEventListener("click", () => {
+
+    
+    letras.forEach(l => l.classList.remove("activa"));
+
+
+    letra.classList.add("activa");
+
+    frase.textContent = letra.dataset.frase;
+    frase.classList.add("visible");
+  });
+});
