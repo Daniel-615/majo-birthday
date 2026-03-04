@@ -725,3 +725,29 @@ body {
   opacity: 1;
   transform: translateY(-5px);
 }
+.paginacion {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paginacion button {
+  background: #ff4d6d;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.paginacion button:hover {
+  background: #e63950;
+}
+
+#numeroPagina {
+  font-size: 14px;
+  color: #444;
+}

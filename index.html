@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -23,6 +23,7 @@
 
     <div class="contenedor">
       <div class="portaretrato-torta-caja">
+
         <div class="portaretrato">
           <div class="marco">
             <img src="/recursos/cumpleañera.jpg" alt="Foto" />
@@ -58,42 +59,47 @@
         </div>
 
         <div class="happy-birthday">Happy Birthday</div>
-        
+
         <div class="happy-birthday-2" id="nombreMajo">
           <span class="letra" data-frase="Me has enseñado que la amistad real sí existe.">M</span>
           <span class="letra" data-frase="Agradezco cada consejo que me diste.">A</span>
           <span class="letra" data-frase="Jamás olvidaré los momentos que compartimos.">J</span>
           <span class="letra" data-frase="Ojalá siempre sigamos riéndonos como siempre.">O</span>
         </div>
+
       </div>
-      
+
       <div class="soporte"></div>
       <div id="fraseMostrada" class="frase-oculta"></div>
     </div>
-    
+
+ 
     <div class="modal-carta" id="modalCarta">
       <div class="contenido-carta">
         <div class="carta">
           <h2>Querida Majo</h2>
-          <p>
-            Hace más de 5 años que la conozco y es una de las amistades más sinceras que he llegado a tener.
-            A excepción de la vez que nos conocimos que mentimos por convivir pero en lo que a mi respecta siempre he sido sincero con usted.
-            Quiero agradecerle por su lealtad, cariño y siempre apoyarme, escucharme en los malos momentos.
-            Por hacer que mis cumpleaños no sean tan feos y siempre sacarme una sonrisa. Gracias por escucharme,
-            cuando le hablaba de Cindy, gracias por aconsejarme y sobre todo estar para mi cuando la necesito.
-            Siempre le estaré agradecido por apoyarme en los momentos de mi abuela, creame que lo valoro un montón. 
-            La quiero y la aprecio. Usted cumplirá muchas de sus metas eso lo tengo por seguro!
-            Siga haciendo reir a las personas y cumpla todos los éxitos que se proponga 🎂✨
-            Espero el pastel :D
-          </p>
+
+    
+          <div id="contenidoCarta"></div>
+
+        
+          <div class="paginacion">
+            <button id="prevBtn">⬅</button>
+            <span id="numeroPagina">1 / 1</span>
+            <button id="nextBtn">➡</button>
+          </div>
+
+
           <p class="firma">Con cariño,<br />Angel</p>
+
         </div>
       </div>
     </div>
+
     <div class="modal-video" id="modalVideo">
       <div class="contenido-video">
         <video id="videoCumple" controls>
-          <source src="/recursos/video.mp4" type="video/mp4">
+          <source src="/recursos/video.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -101,11 +107,8 @@
     <canvas id="canvas2"></canvas>
 
     <audio id="soplido" src="/recursos/soplar1.mp3" preload="auto"></audio>
-    <audio
-      id="cancion"
-      src="/recursos/cancion.mp3"
-      preload="auto"
-    ></audio>
+    <audio id="cancion" src="/recursos/cancion.mp3" preload="auto"></audio>
+
     <div class="overlay"></div>
 
     <script src="Confeti.js"></script>
@@ -113,4 +116,3 @@
     <script src="Sorpresa.js"></script>
   </body>
 </html>
-
